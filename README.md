@@ -1,2 +1,2 @@
 # CourseProject
-"Bunker" created with the use of LAN
+"Shelter" created with the use of LAN
