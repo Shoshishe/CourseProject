@@ -1,0 +1,5 @@
+/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/Course_project.dir
+/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen_timestamp_deps.dir
+/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir
