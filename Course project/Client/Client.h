@@ -1,7 +1,3 @@
-//
-// Created by shosh on 4/25/24.
-//
-
 #ifndef COURSE_PROJECT_CLIENT_H
 #define COURSE_PROJECT_CLIENT_H
 
@@ -20,7 +16,7 @@ private:
     QTcpSocket *ServerConnector = new QTcpSocket(this);
 public:
     Client();
-    Character deserealizeJSON(const QByteArray& JSON);
+    Character deserШalizeJSON(const QByteArray& JSON);
 public slots:
     void broadcastHandle();
     void connectToHost(const QString& ip_address);

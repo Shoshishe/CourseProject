@@ -9,8 +9,7 @@ void Host::broadcastTheHostIP() {
     BroadcastSender->writeDatagram(dgram.data(), dgram.size(), QHostAddress::Broadcast, 33333);
 }
 
-void Host::createServer() {
-    generateCharacter();
+void Host::createServer() {;
     if (!MainServer->listen(QHostAddress::Any, 33334)) {
         qDebug() << QObject::tr("Unable to start the server");
     }
@@ -24,7 +23,7 @@ void Host::createServer() {
         qDebug() << "Nice job, you've connected your client to host";
         ClientsIpAddresses.append(MainServer->nextPendingConnection());
         Character NewUserCharacter = generateCharacter();
-        QJsonDocument doc(serializeChraracterToJSON(&NewUserCharacter));
+        QJsonDocument doc(serializeCharacterToJSON(&NewUserCharacter));
         qDebug() << doc;
         ClientsIpAddresses.last()->write(doc.toJson());
     });
@@ -32,10 +31,6 @@ void Host::createServer() {
 
 void Host::hostGame() {
     createServer();
-}
-
-Host::Host() {
-
 }
 
 static QString readRandomStatFromFile(long random_number, QFile* FileToRead) {
@@ -77,7 +72,7 @@ Character Host::generateCharacter() {
     return Character(random_int % 72 + 18, sex, health, fears, personal_traits, additional_info, packages);
 }
 
-QJsonObject Host::serializeChraracterToJSON(Character *PlayerCharacter) {
+QJsonObject Host::serializeCharacterToJSON(Character *PlayerCharacter) {
     QJsonObject recorded_object;
     recorded_object.insert("age", QJsonValue::fromVariant(PlayerCharacter->getCharacterAge()));
     recorded_object.insert("sex", QJsonValue::fromVariant(PlayerCharacter->getCharacterSex()));

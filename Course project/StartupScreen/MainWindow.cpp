@@ -1,8 +1,3 @@
-//
-// Created by shosh on 4/23/24.
-//
-
-
 #include "MainWindow.h"
 
 MainWindow::MainWindow() {
@@ -34,6 +29,7 @@ void MainWindow::startGameAsHost() {
     changeToGameScreen();
     GameHost = new Host;
     GameHost->hostGame();
+    GameWindow->addCharacterToWindow(GameHost->generateCharacter());
 }
 
 void MainWindow::startGameAsUser() {

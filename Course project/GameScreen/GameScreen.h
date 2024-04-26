@@ -1,11 +1,8 @@
-//
-// Created by shosh on 4/23/24.
-//
-
 #ifndef COURSE_PROJECT_GAMESCREEN_H
 #define COURSE_PROJECT_GAMESCREEN_H
 
 #include "QLabel"
+#include "QGridLayout"
 #include "QWidget"
 #include "QDebug"
 #include "QVector"
@@ -13,6 +10,7 @@
 
 class GameScreen : public QWidget {
     QLabel *PlaceHolder = new QLabel("There should be something");
+    QGridLayout *ScreenLayout = new QGridLayout;
     QVector<CharactersWindows*> CharactersFrames;
 public:
     GameScreen();

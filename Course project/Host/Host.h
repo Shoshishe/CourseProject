@@ -28,8 +28,7 @@ private:
 public:
     void createServer();
     void hostGame();
-    QJsonObject serializeChraracterToJSON(Character *PlayerCharacter);
-    Host();
+    static QJsonObject serializeCharacterToJSON(Character *PlayerCharacter);
 public slots:
     void broadcastTheHostIP();
     Character generateCharacter();

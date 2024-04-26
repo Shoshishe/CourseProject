@@ -8,13 +8,15 @@
 #include "QFrame"
 #include "../../Models/Character.h"
 #include "QLabel"
+#include "QWidget"
+#include "QVBoxLayout"
 #include "QGridLayout"
 
 class CharactersWindows: public QFrame {
- QWidget *CharacterWidget = new QWidget(this);
  Character *PlayerCharacter = nullptr;
 public:
- CharactersWindows(Character &GivenCharacter);
+    QWidget *CreateCharacterWidget();
+    CharactersWindows(Character &GivenCharacter);
 };
 
 

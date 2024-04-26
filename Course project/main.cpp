@@ -9,6 +9,6 @@
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    MainWindow *Main = new MainWindow();
+    auto *Main = new MainWindow();
     return QApplication::exec();
 }

@@ -1,7 +1,3 @@
-//
-// Created by shosh on 4/25/24.
-//
-
 #include "Character.h"
 
 #include <utility>
