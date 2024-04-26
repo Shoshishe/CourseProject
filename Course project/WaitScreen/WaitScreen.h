@@ -1,7 +1,3 @@
-//
-// Created by shosh on 4/24/24.
-//
-
 #ifndef COURSE_PROJECT_WAITSCREEN_H
 #define COURSE_PROJECT_WAITSCREEN_H
 

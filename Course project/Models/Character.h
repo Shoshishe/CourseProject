@@ -1,7 +1,3 @@
-//
-// Created by shosh on 4/25/24.
-//
-
 #ifndef COURSE_PROJECT_CHARACTER_H
 #define COURSE_PROJECT_CHARACTER_H
 

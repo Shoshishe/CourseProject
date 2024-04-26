@@ -1,13 +1,11 @@
-//
-// Created by shosh on 4/23/24.
-//
-
 #include "GameScreen.h"
 
 GameScreen::GameScreen() {
- PlaceHolder->setParent(this);
+ ScreenLayout->addWidget(PlaceHolder,0,0);
+ this->setLayout(ScreenLayout);
 }
 
 void GameScreen::addCharacterToWindow(Character PlayerCharacter) {
-  qDebug() << "Character added. Or, perhaps, will be...";
+  CharactersFrames.append(new CharactersWindows(PlayerCharacter));
+  ScreenLayout->addWidget(CharactersFrames.last(), ScreenLayout->rowCount() - 1, ScreenLayout->columnCount());
 }

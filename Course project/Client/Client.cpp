@@ -1,10 +1,6 @@
-//
-// Created by shosh on 4/25/24.
-//
-
 #include "Client.h"
 
-Character Client::deserealizeJSON(const QByteArray& JSON) {
+Character Client::deserШalizeJSON(const QByteArray& JSON) {
    QByteArrayList JSONParams = JSON.split(',');
    QString info = JSONParams[0].split(':')[1];
    short age = JSONParams[1].split(':')[1].toInt();
@@ -12,18 +8,18 @@ Character Client::deserealizeJSON(const QByteArray& JSON) {
    QString health = JSONParams[3].split(':')[1];
    QString package = JSONParams[4].split(':')[1];
    QString traits = JSONParams[5].split(':')[1];
-   QString sex = JSONParams[6].split(':')[1];
+   QString sex = JSONParams[6].split(':')[1].chopped(2);
    emit characterReceived(Character(age, sex, health, fear, traits, info, package));
    return Character(age, sex, health, fear, traits, info, package);
 }
 
 Client::Client() {
-    BroadcastReceiver->bind(33333);
+    BroadcastReceiver->bind(33333,QUdpSocket::ShareAddress);
     connect(BroadcastReceiver, &QUdpSocket::readyRead, this, &Client::broadcastHandle);
     connect(ServerConnector, &QTcpSocket::readyRead, [=] {
         //All that is left is deserealising that
         qDebug() << "LEEEEES GOOOOOO";
-        deserealizeJSON(ServerConnector->readAll());
+        deserШalizeJSON(ServerConnector->readAll());
     });
 }
 

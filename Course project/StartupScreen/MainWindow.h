@@ -1,7 +1,3 @@
-//
-// Created by shosh on 4/23/24.
-//
-
 #ifndef COURSE_PROJECT_MAINWINDOW_H
 #define COURSE_PROJECT_MAINWINDOW_H
 

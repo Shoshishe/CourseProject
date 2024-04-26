@@ -1,7 +1,3 @@
-//
-// Created by shosh on 4/24/24.
-//
-
 #include "WaitScreen.h"
 
 void WaitScreen::AddNewHostEntry(const QString& ip_address) {
