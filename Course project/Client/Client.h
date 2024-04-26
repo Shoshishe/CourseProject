@@ -11,6 +11,7 @@
 #include <QTimer>
 #include "QObject"
 #include "QDataStream"
+#include "../Models/Character.h"
 
 class Client : public QObject {
     Q_OBJECT
@@ -19,10 +20,14 @@ private:
     QTcpSocket *ServerConnector = new QTcpSocket(this);
 public:
     Client();
+    Character deserealizeJSON(const QByteArray& JSON);
 public slots:
     void broadcastHandle();
+    void connectToHost(const QString& ip_address);
        signals:
+    void characterReceived(Character);
     void broadcastReceived(QString);
+    void connected();
 };
 
 

@@ -7,3 +7,7 @@
 GameScreen::GameScreen() {
  PlaceHolder->setParent(this);
 }
+
+void GameScreen::addCharacterToWindow(Character PlayerCharacter) {
+  qDebug() << "Character added. Or, perhaps, will be...";
+}

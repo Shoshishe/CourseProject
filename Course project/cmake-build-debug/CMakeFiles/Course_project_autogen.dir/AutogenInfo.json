@@ -100,6 +100,12 @@
 			null
 		],
 		[
+			"/home/shosh/CLionProjects/Course project/GameScreen/CharactersWindows/CharactersWindows.h",
+			"MU",
+			"CQOTVBX6R6/moc_CharactersWindows.cpp",
+			null
+		],
+		[
 			"/home/shosh/CLionProjects/Course project/GameScreen/GameScreen.h",
 			"MU",
 			"ER3QNRLDTK/moc_GameScreen.cpp",
@@ -183,6 +189,11 @@
 	[
 		[
 			"/home/shosh/CLionProjects/Course project/Client/Client.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/shosh/CLionProjects/Course project/GameScreen/CharactersWindows/CharactersWindows.cpp",
 			"MU",
 			null
 		],

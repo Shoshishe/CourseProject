@@ -16,3 +16,32 @@ Character::Character(short age, QString sex, QString health, QString fear, QStri
  this->additional_information = std::move(additional_information);
  this->package = std::move(package);
 }
+
+int Character::getCharacterAge() {
+    return age;
+}
+
+QString Character::getCharacterSex() {
+    return sex;
+}
+
+QString Character::getCharacterHealth() {
+    return health;
+}
+
+QString Character::getCharacterFear() {
+    return fear;
+}
+
+QString Character::getCharacterPersonalTraits() {
+    return personal_traits;
+}
+
+QString Character::getCharacterAdditionalInfo() {
+    return additional_information;
+}
+
+QString Character::getCharacterPackage() {
+    return package;
+}
+

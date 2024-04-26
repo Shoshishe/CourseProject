@@ -26,7 +26,9 @@ add_executable(Course_project main.cpp
         Client/Client.cpp
         Client/Client.h
         Models/Character.cpp
-        Models/Character.h)
+        Models/Character.h
+        GameScreen/CharactersWindows/CharactersWindows.cpp
+        GameScreen/CharactersWindows/CharactersWindows.h)
 target_link_libraries(Course_project
         Qt5::Core
         Qt5::Gui

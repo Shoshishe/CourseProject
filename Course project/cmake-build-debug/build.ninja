@@ -113,6 +113,14 @@ build CMakeFiles/Course_project.dir/Models/Character.cpp.o: CXX_COMPILER__Course
   OBJECT_DIR = CMakeFiles/Course_project.dir
   OBJECT_FILE_DIR = CMakeFiles/Course_project.dir/Models
 
+build CMakeFiles/Course_project.dir/GameScreen/CharactersWindows/CharactersWindows.cpp.o: CXX_COMPILER__Course_project_unscanned_Debug /home/shosh/CLionProjects/Course$ project/GameScreen/CharactersWindows/CharactersWindows.cpp || cmake_object_order_depends_target_Course_project
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Course_project.dir/GameScreen/CharactersWindows/CharactersWindows.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem "/home/shosh/CLionProjects/Course project/cmake-build-debug/Course_project_autogen/include" -isystem /usr/include/qt -isystem /usr/include/qt/QtCore -isystem /usr/lib/qt/mkspecs/linux-g++ -isystem /usr/include/qt/QtGui -isystem /usr/include/qt/QtWidgets -isystem /usr/include/qt/QtNetwork
+  OBJECT_DIR = CMakeFiles/Course_project.dir
+  OBJECT_FILE_DIR = CMakeFiles/Course_project.dir/GameScreen/CharactersWindows
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Course_project
@@ -121,7 +129,7 @@ build CMakeFiles/Course_project.dir/Models/Character.cpp.o: CXX_COMPILER__Course
 #############################################
 # Link the executable Course_project
 
-build Course_project: CXX_EXECUTABLE_LINKER__Course_project_Debug CMakeFiles/Course_project.dir/Course_project_autogen/mocs_compilation.cpp.o CMakeFiles/Course_project.dir/main.cpp.o CMakeFiles/Course_project.dir/StartupScreen/MainWindow.cpp.o CMakeFiles/Course_project.dir/GameScreen/GameScreen.cpp.o CMakeFiles/Course_project.dir/WaitScreen/WaitScreen.cpp.o CMakeFiles/Course_project.dir/Host/Host.cpp.o CMakeFiles/Course_project.dir/Client/Client.cpp.o CMakeFiles/Course_project.dir/Models/Character.cpp.o | /usr/lib/libQt5Widgets.so.5.15.13 /usr/lib/libQt5Network.so.5.15.13 /usr/lib/libQt5Gui.so.5.15.13 /usr/lib/libQt5Core.so.5.15.13 || Course_project_autogen Course_project_autogen_timestamp_deps
+build Course_project: CXX_EXECUTABLE_LINKER__Course_project_Debug CMakeFiles/Course_project.dir/Course_project_autogen/mocs_compilation.cpp.o CMakeFiles/Course_project.dir/main.cpp.o CMakeFiles/Course_project.dir/StartupScreen/MainWindow.cpp.o CMakeFiles/Course_project.dir/GameScreen/GameScreen.cpp.o CMakeFiles/Course_project.dir/WaitScreen/WaitScreen.cpp.o CMakeFiles/Course_project.dir/Host/Host.cpp.o CMakeFiles/Course_project.dir/Client/Client.cpp.o CMakeFiles/Course_project.dir/Models/Character.cpp.o CMakeFiles/Course_project.dir/GameScreen/CharactersWindows/CharactersWindows.cpp.o | /usr/lib/libQt5Widgets.so.5.15.13 /usr/lib/libQt5Network.so.5.15.13 /usr/lib/libQt5Gui.so.5.15.13 /usr/lib/libQt5Core.so.5.15.13 || Course_project_autogen Course_project_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/libQt5Widgets.so.5.15.13  /usr/lib/libQt5Network.so.5.15.13  /usr/lib/libQt5Gui.so.5.15.13  /usr/lib/libQt5Core.so.5.15.13
   OBJECT_DIR = CMakeFiles/Course_project.dir
@@ -179,7 +187,7 @@ build Course_project_autogen/timestamp Course_project_autogen/mocs_compilation.c
 #############################################
 # Phony custom command for CMakeFiles/Course_project_autogen_timestamp_deps
 
-build CMakeFiles/Course_project_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Course_project_autogen_timestamp_deps: phony /usr/lib/libQt5Core.so.5.15.13 /usr/bin/moc /usr/lib/libQt5Widgets.so.5.15.13 /usr/lib/libQt5Gui.so.5.15.13 /usr/bin/uic /usr/lib/libQt5Network.so.5.15.13
+build CMakeFiles/Course_project_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Course_project_autogen_timestamp_deps: phony /usr/lib/libQt5Core.so.5.15.13 /usr/bin/moc /usr/bin/uic /usr/lib/libQt5Widgets.so.5.15.13 /usr/lib/libQt5Gui.so.5.15.13 /usr/lib/libQt5Network.so.5.15.13
 
 
 #############################################

@@ -39,7 +39,6 @@ public:
     void changeToGameScreen();
     void changeToWaitScreen();
 public slots:
-    void SendUserConnectionRequest();
     void startGameAsUser();
     void startGameAsHost();
 };

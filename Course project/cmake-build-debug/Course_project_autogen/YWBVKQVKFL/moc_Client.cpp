@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Client_t {
-    QByteArrayData data[4];
-    char stringdata0[42];
+    QByteArrayData data[9];
+    char stringdata0[105];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,12 +33,19 @@ struct qt_meta_stringdata_Client_t {
 static const qt_meta_stringdata_Client_t qt_meta_stringdata_Client = {
     {
 QT_MOC_LITERAL(0, 0, 6), // "Client"
-QT_MOC_LITERAL(1, 7, 17), // "broadcastReceived"
+QT_MOC_LITERAL(1, 7, 17), // "characterReceived"
 QT_MOC_LITERAL(2, 25, 0), // ""
-QT_MOC_LITERAL(3, 26, 15) // "broadcastHandle"
+QT_MOC_LITERAL(3, 26, 9), // "Character"
+QT_MOC_LITERAL(4, 36, 17), // "broadcastReceived"
+QT_MOC_LITERAL(5, 54, 9), // "connected"
+QT_MOC_LITERAL(6, 64, 15), // "broadcastHandle"
+QT_MOC_LITERAL(7, 80, 13), // "connectToHost"
+QT_MOC_LITERAL(8, 94, 10) // "ip_address"
 
     },
-    "Client\0broadcastReceived\0\0broadcastHandle"
+    "Client\0characterReceived\0\0Character\0"
+    "broadcastReceived\0connected\0broadcastHandle\0"
+    "connectToHost\0ip_address"
 };
 #undef QT_MOC_LITERAL
 
@@ -48,24 +55,30 @@ static const uint qt_meta_data_Client[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x06 /* Public */,
+       1,    1,   39,    2, 0x06 /* Public */,
+       4,    1,   42,    2, 0x06 /* Public */,
+       5,    0,   45,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   27,    2, 0x0a /* Public */,
+       6,    0,   46,    2, 0x0a /* Public */,
+       7,    1,   47,    2, 0x0a /* Public */,
 
  // signals: parameters
+    QMetaType::Void, 0x80000000 | 3,    2,
     QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    8,
 
        0        // eod
 };
@@ -76,16 +89,33 @@ void Client::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         auto *_t = static_cast<Client *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->broadcastReceived((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 1: _t->broadcastHandle(); break;
+        case 0: _t->characterReceived((*reinterpret_cast< Character(*)>(_a[1]))); break;
+        case 1: _t->broadcastReceived((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 2: _t->connected(); break;
+        case 3: _t->broadcastHandle(); break;
+        case 4: _t->connectToHost((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
+            using _t = void (Client::*)(Character );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Client::characterReceived)) {
+                *result = 0;
+                return;
+            }
+        }
+        {
             using _t = void (Client::*)(QString );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Client::broadcastReceived)) {
-                *result = 0;
+                *result = 1;
+                return;
+            }
+        }
+        {
+            using _t = void (Client::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Client::connected)) {
+                *result = 2;
                 return;
             }
         }
@@ -121,22 +151,35 @@ int Client::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 5;
     }
     return _id;
 }
 
 // SIGNAL 0
-void Client::broadcastReceived(QString _t1)
+void Client::characterReceived(Character _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void Client::broadcastReceived(QString _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void Client::connected()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

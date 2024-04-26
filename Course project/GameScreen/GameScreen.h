@@ -7,10 +7,17 @@
 
 #include "QLabel"
 #include "QWidget"
+#include "QDebug"
+#include "QVector"
+#include "CharactersWindows/CharactersWindows.h"
 
 class GameScreen : public QWidget {
- QLabel *PlaceHolder = new QLabel("There should be something");
-public: GameScreen();
+    QLabel *PlaceHolder = new QLabel("There should be something");
+    QVector<CharactersWindows*> CharactersFrames;
+public:
+    GameScreen();
+public slots:
+    void addCharacterToWindow(Character PlayerCharacter);
 };
 
 

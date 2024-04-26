@@ -37,9 +37,14 @@ void MainWindow::startGameAsHost() {
 }
 
 void MainWindow::startGameAsUser() {
-    changeToWaitScreen();
     GameClient = new Client;
     connect(GameClient, &Client::broadcastReceived, WaitWindow, &WaitScreen::AddNewHostEntry);
+    WaitWindow->setUserAsWaiting(GameClient);
+    changeToWaitScreen();
+    connect(GameClient, &Client::connected, [=] {
+        this->changeToGameScreen();
+    });
+    connect(GameClient, &Client::characterReceived, GameWindow, &GameScreen::addCharacterToWindow);
 }
 
 void MainWindow::changeToGameScreen() {
@@ -48,21 +53,5 @@ void MainWindow::changeToGameScreen() {
 
 void MainWindow::changeToWaitScreen() {
     CentralScreen->setCurrentIndex(WaitScreenIndex);
-}
-
-
-void MainWindow::SendUserConnectionRequest() {
- QUdpSocket *IpSender = new QUdpSocket;
-
- //Implementation of connecting user. User gets the list of all possible options, with the NAME of the user and probably ip, and chooses the server
-
- QTcpSocket *Connector = new QTcpSocket;
- QByteArray dgram = "Sending address";
- IpSender->writeDatagram(dgram.data(), dgram.size(), QHostAddress::Broadcast, 33333);
- connect(IpSender, &QUdpSocket::readyRead, [Connector, IpSender] {
-     char *datagram_content = new char[IpSender->pendingDatagramSize()];
-     QHostAddress *SenderIP = new QHostAddress;
-     IpSender->readDatagram(datagram_content, IpSender->pendingDatagramSize(), SenderIP);
- });
 }
 

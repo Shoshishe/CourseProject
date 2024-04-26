@@ -2,6 +2,8 @@ Course_project_autogen/timestamp: \
   /home/shosh/CLionProjects/Course\ project/CMakeLists.txt \
   /home/shosh/CLionProjects/Course\ project/Client/Client.cpp \
   /home/shosh/CLionProjects/Course\ project/Client/Client.h \
+  /home/shosh/CLionProjects/Course\ project/GameScreen/CharactersWindows/CharactersWindows.cpp \
+  /home/shosh/CLionProjects/Course\ project/GameScreen/CharactersWindows/CharactersWindows.h \
   /home/shosh/CLionProjects/Course\ project/GameScreen/GameScreen.cpp \
   /home/shosh/CLionProjects/Course\ project/GameScreen/GameScreen.h \
   /home/shosh/CLionProjects/Course\ project/Host/Host.cpp \
@@ -273,6 +275,7 @@ Course_project_autogen/timestamp: \
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QDataStream \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QString \
   /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
