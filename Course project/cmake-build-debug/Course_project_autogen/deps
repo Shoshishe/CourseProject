@@ -1,43 +1,47 @@
 Course_project_autogen/timestamp: \
-	/home/shosh/CLionProjects/Course\ project/CMakeLists.txt \
-	/home/shosh/CLionProjects/Course\ project/Client/Client.cpp \
-	/home/shosh/CLionProjects/Course\ project/Client/Client.h \
-	/home/shosh/CLionProjects/Course\ project/GameScreen/CharactersWindows/CharactersWindows.cpp \
-	/home/shosh/CLionProjects/Course\ project/GameScreen/CharactersWindows/CharactersWindows.h \
-	/home/shosh/CLionProjects/Course\ project/GameScreen/GameScreen.cpp \
-	/home/shosh/CLionProjects/Course\ project/GameScreen/GameScreen.h \
-	/home/shosh/CLionProjects/Course\ project/Host/Host.cpp \
-	/home/shosh/CLionProjects/Course\ project/Host/Host.h \
-	/home/shosh/CLionProjects/Course\ project/Models/Character.cpp \
-	/home/shosh/CLionProjects/Course\ project/Models/Character.h \
-	/home/shosh/CLionProjects/Course\ project/StartupScreen/MainWindow.cpp \
-	/home/shosh/CLionProjects/Course\ project/StartupScreen/MainWindow.h \
-	/home/shosh/CLionProjects/Course\ project/WaitScreen/WaitScreen.cpp \
-	/home/shosh/CLionProjects/Course\ project/WaitScreen/WaitScreen.h \
-	/home/shosh/CLionProjects/Course\ project/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake \
-	/home/shosh/CLionProjects/Course\ project/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake \
-	/home/shosh/CLionProjects/Course\ project/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake \
-	/home/shosh/CLionProjects/Course\ project/cmake-build-debug/Course_project_autogen/moc_predefs.h \
-	/home/shosh/CLionProjects/Course\ project/main.cpp \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeParseArguments.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/CMakeLists.txt \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/Client/Client.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/Client/Client.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/EnterCountcreen/EnterCountScreen.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/EnterCountcreen/EnterCountScreen.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/GameScreen/CharactersWindows/CharactersWindows.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/GameScreen/CharactersWindows/CharactersWindows.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/GameScreen/GameScreen.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/GameScreen/GameScreen.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/Host/Host.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/Host/Host.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/Middleware/Randomisation.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/Middleware/Randomisation.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/Models/Character.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/Models/Character.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/StartupScreen/MainWindow.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/StartupScreen/MainWindow.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/WaitScreen/WaitScreen.cpp \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/WaitScreen/WaitScreen.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/cmake-build-debug/Course_project_autogen/moc_predefs.h \
+	/home/shosh/CLionProjects/CourseProject/Course\ project/main.cpp \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseArguments.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake \
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
 	/usr/include/asm/errno.h \
@@ -273,9 +277,12 @@ Course_project_autogen/timestamp: \
 	/usr/include/locale.h \
 	/usr/include/pthread.h \
 	/usr/include/qt/QtCore/QDataStream \
+	/usr/include/qt/QtCore/QDebug \
+	/usr/include/qt/QtCore/QMap \
 	/usr/include/qt/QtCore/QObject \
 	/usr/include/qt/QtCore/QString \
 	/usr/include/qt/QtCore/QTimer \
+	/usr/include/qt/QtCore/QVector \
 	/usr/include/qt/QtCore/qalgorithms.h \
 	/usr/include/qt/QtCore/qarraydata.h \
 	/usr/include/qt/QtCore/qatomic.h \
@@ -300,10 +307,12 @@ Course_project_autogen/timestamp: \
 	/usr/include/qt/QtCore/qhashfunctions.h \
 	/usr/include/qt/QtCore/qiodevice.h \
 	/usr/include/qt/QtCore/qiterator.h \
+	/usr/include/qt/QtCore/qline.h \
 	/usr/include/qt/QtCore/qlist.h \
 	/usr/include/qt/QtCore/qlocale.h \
 	/usr/include/qt/QtCore/qlogging.h \
 	/usr/include/qt/QtCore/qmap.h \
+	/usr/include/qt/QtCore/qmargins.h \
 	/usr/include/qt/QtCore/qmetatype.h \
 	/usr/include/qt/QtCore/qnamespace.h \
 	/usr/include/qt/QtCore/qnumeric.h \
@@ -312,14 +321,18 @@ Course_project_autogen/timestamp: \
 	/usr/include/qt/QtCore/qobjectdefs.h \
 	/usr/include/qt/QtCore/qobjectdefs_impl.h \
 	/usr/include/qt/QtCore/qpair.h \
+	/usr/include/qt/QtCore/qpoint.h \
 	/usr/include/qt/QtCore/qprocessordetection.h \
+	/usr/include/qt/QtCore/qrect.h \
 	/usr/include/qt/QtCore/qrefcount.h \
 	/usr/include/qt/QtCore/qregexp.h \
+	/usr/include/qt/QtCore/qregularexpression.h \
 	/usr/include/qt/QtCore/qscopedpointer.h \
 	/usr/include/qt/QtCore/qset.h \
 	/usr/include/qt/QtCore/qshareddata.h \
 	/usr/include/qt/QtCore/qsharedpointer.h \
 	/usr/include/qt/QtCore/qsharedpointer_impl.h \
+	/usr/include/qt/QtCore/qsize.h \
 	/usr/include/qt/QtCore/qstring.h \
 	/usr/include/qt/QtCore/qstringalgorithms.h \
 	/usr/include/qt/QtCore/qstringlist.h \
@@ -336,6 +349,33 @@ Course_project_autogen/timestamp: \
 	/usr/include/qt/QtCore/qvarlengtharray.h \
 	/usr/include/qt/QtCore/qvector.h \
 	/usr/include/qt/QtCore/qversiontagging.h \
+	/usr/include/qt/QtGui/qbrush.h \
+	/usr/include/qt/QtGui/qcolor.h \
+	/usr/include/qt/QtGui/qcursor.h \
+	/usr/include/qt/QtGui/qfont.h \
+	/usr/include/qt/QtGui/qfontinfo.h \
+	/usr/include/qt/QtGui/qfontmetrics.h \
+	/usr/include/qt/QtGui/qicon.h \
+	/usr/include/qt/QtGui/qimage.h \
+	/usr/include/qt/QtGui/qkeysequence.h \
+	/usr/include/qt/QtGui/qmatrix.h \
+	/usr/include/qt/QtGui/qpaintdevice.h \
+	/usr/include/qt/QtGui/qpalette.h \
+	/usr/include/qt/QtGui/qpen.h \
+	/usr/include/qt/QtGui/qpixelformat.h \
+	/usr/include/qt/QtGui/qpixmap.h \
+	/usr/include/qt/QtGui/qpolygon.h \
+	/usr/include/qt/QtGui/qregion.h \
+	/usr/include/qt/QtGui/qrgb.h \
+	/usr/include/qt/QtGui/qrgba64.h \
+	/usr/include/qt/QtGui/qtextcursor.h \
+	/usr/include/qt/QtGui/qtextformat.h \
+	/usr/include/qt/QtGui/qtextoption.h \
+	/usr/include/qt/QtGui/qtgui-config.h \
+	/usr/include/qt/QtGui/qtguiglobal.h \
+	/usr/include/qt/QtGui/qtransform.h \
+	/usr/include/qt/QtGui/qvalidator.h \
+	/usr/include/qt/QtGui/qwindowdefs.h \
 	/usr/include/qt/QtNetwork/QTcpServer \
 	/usr/include/qt/QtNetwork/QTcpSocket \
 	/usr/include/qt/QtNetwork/QUdpSocket \
@@ -346,6 +386,29 @@ Course_project_autogen/timestamp: \
 	/usr/include/qt/QtNetwork/qtnetwork-config.h \
 	/usr/include/qt/QtNetwork/qtnetworkglobal.h \
 	/usr/include/qt/QtNetwork/qudpsocket.h \
+	/usr/include/qt/QtWidgets/QFrame \
+	/usr/include/qt/QtWidgets/QGridLayout \
+	/usr/include/qt/QtWidgets/QLabel \
+	/usr/include/qt/QtWidgets/QLineEdit \
+	/usr/include/qt/QtWidgets/QPushButton \
+	/usr/include/qt/QtWidgets/QSpinBox \
+	/usr/include/qt/QtWidgets/QVBoxLayout \
+	/usr/include/qt/QtWidgets/QWidget \
+	/usr/include/qt/QtWidgets/qabstractbutton.h \
+	/usr/include/qt/QtWidgets/qabstractspinbox.h \
+	/usr/include/qt/QtWidgets/qboxlayout.h \
+	/usr/include/qt/QtWidgets/qframe.h \
+	/usr/include/qt/QtWidgets/qgridlayout.h \
+	/usr/include/qt/QtWidgets/qlabel.h \
+	/usr/include/qt/QtWidgets/qlayout.h \
+	/usr/include/qt/QtWidgets/qlayoutitem.h \
+	/usr/include/qt/QtWidgets/qlineedit.h \
+	/usr/include/qt/QtWidgets/qpushbutton.h \
+	/usr/include/qt/QtWidgets/qsizepolicy.h \
+	/usr/include/qt/QtWidgets/qspinbox.h \
+	/usr/include/qt/QtWidgets/qtwidgets-config.h \
+	/usr/include/qt/QtWidgets/qtwidgetsglobal.h \
+	/usr/include/qt/QtWidgets/qwidget.h \
 	/usr/include/sched.h \
 	/usr/include/stdc-predef.h \
 	/usr/include/stdio.h \
@@ -381,23 +444,33 @@ Course_project_autogen/timestamp: \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QPdfPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QTsLibPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake \
+	/usr/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake \
 	/usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake \
@@ -416,4 +489,4 @@ Course_project_autogen/timestamp: \
 	/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h \
 	/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdint.h \
 	/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/syslimits.h \
-	/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/bin/cmake
+	/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/bin/cmake

@@ -9,6 +9,7 @@ MainWindow::MainWindow() {
     CentralScreen->insertWidget(MainScreenIndex,StartupWindow);
     CentralScreen->insertWidget(GameScreenIndex, GameWindow);
     CentralScreen->insertWidget(WaitScreenIndex, WaitWindow);
+    CentralScreen->insertWidget(EnterNameScreenIndex, EnterCountWindow);
 
     this->setCentralWidget(CentralScreen);
     StartupWindow->setMinimumSize(500, 500);
@@ -26,10 +27,19 @@ MainWindow::MainWindow() {
 }
 
 void MainWindow::startGameAsHost() {
-    changeToGameScreen();
-    GameHost = new Host;
-    GameHost->hostGame();
-    GameWindow->addCharacterToWindow(GameHost->generateCharacter());
+    QSize default_size = this->size();
+    this->setFixedSize(500,400);
+    changeToEnterCountScreen();
+    connect(EnterCountWindow, &EnterCountScreen::countSet,[=](int count) {
+        this->setMinimumSize(500, 500);
+        this->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
+        changeToGameScreen();
+        GameHost = new Host;
+        GameHost->hostGame(count);
+        connect(GameHost, &Client::characterReceived, GameWindow, &GameScreen::addCharacterToWindow);
+        GameHost->connectToHost(GameHost->getServerAddress().toString());
+        connect(GameWindow, &GameScreen::traitSent, GameHost, &Client::sendTraitOverUdp);
+    });
 }
 
 void MainWindow::startGameAsUser() {
@@ -41,6 +51,7 @@ void MainWindow::startGameAsUser() {
         this->changeToGameScreen();
     });
     connect(GameClient, &Client::characterReceived, GameWindow, &GameScreen::addCharacterToWindow);
+    connect(GameWindow, &GameScreen::traitSent, GameClient, &Client::sendTraitOverUdp);
 }
 
 void MainWindow::changeToGameScreen() {
@@ -49,5 +60,9 @@ void MainWindow::changeToGameScreen() {
 
 void MainWindow::changeToWaitScreen() {
     CentralScreen->setCurrentIndex(WaitScreenIndex);
+}
+
+void MainWindow::changeToEnterCountScreen() {
+    CentralScreen->setCurrentIndex(EnterNameScreenIndex);
 }
 

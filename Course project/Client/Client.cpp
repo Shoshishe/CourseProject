@@ -1,9 +1,9 @@
 #include "Client.h"
 
-Character Client::deserШalizeJSON(const QByteArray& JSON) {
+Character Client::deserealizeJSON(const QByteArray& JSON) {
    QByteArrayList JSONParams = JSON.split(',');
    QString info = JSONParams[0].split(':')[1];
-   short age = JSONParams[1].split(':')[1].toInt();
+   short age = JSONParams[1].split(':')[1].toShort();
    QString fear = JSONParams[2].split(':')[1];
    QString health = JSONParams[3].split(':')[1];
    QString package = JSONParams[4].split(':')[1];
@@ -17,9 +17,7 @@ Client::Client() {
     BroadcastReceiver->bind(33333,QUdpSocket::ShareAddress);
     connect(BroadcastReceiver, &QUdpSocket::readyRead, this, &Client::broadcastHandle);
     connect(ServerConnector, &QTcpSocket::readyRead, [=] {
-        //All that is left is deserealising that
-        qDebug() << "LEEEEES GOOOOOO";
-        deserШalizeJSON(ServerConnector->readAll());
+        deserealizeJSON(ServerConnector->readAll());
     });
 }
 
@@ -28,13 +26,16 @@ void Client::broadcastHandle() {
     unsigned short *sender_ip = nullptr;
     QHostAddress BroadcastSender;
     BroadcastReceiver->readDatagram(data, BroadcastReceiver->pendingDatagramSize(), &BroadcastSender, sender_ip);
-    qDebug() << ServerConnector->localAddress().toString();
     QString data_in_string(data);
     emit broadcastReceived(data_in_string);
 }
 
 void Client::connectToHost(const QString& ip_address) {
-  ServerConnector->connectToHost(ip_address,33334);
+   ServerConnector->connectToHost(ip_address,33334);
+}
+
+void Client::sendTraitOverUdp(const QString& trait) {
+  qDebug() << "HAHAHHAHAHAHA";
 }
 
 

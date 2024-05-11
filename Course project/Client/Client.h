@@ -1,6 +1,7 @@
 #ifndef COURSE_PROJECT_CLIENT_H
 #define COURSE_PROJECT_CLIENT_H
 
+#include "QDebug"
 #include <QTcpSocket>
 #include <QUdpSocket>
 #include <QTcpServer>
@@ -11,15 +12,18 @@
 
 class Client : public QObject {
     Q_OBJECT
-private:
+protected:
+    QString name_of_player;
     QUdpSocket *BroadcastReceiver = new QUdpSocket(this);
+    QUdpSocket *TraitsSocket = new QUdpSocket(this);
     QTcpSocket *ServerConnector = new QTcpSocket(this);
 public:
     Client();
-    Character deserШalizeJSON(const QByteArray& JSON);
+    Character deserealizeJSON(const QByteArray& JSON);
 public slots:
     void broadcastHandle();
     void connectToHost(const QString& ip_address);
+    void sendTraitOverUdp(const QString& trait);
        signals:
     void characterReceived(Character);
     void broadcastReceived(QString);

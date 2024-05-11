@@ -1,37 +1,37 @@
 {
-	"BUILD_DIR" : "/home/shosh/CLionProjects/Course project/cmake-build-debug/Course_project_autogen",
-	"CMAKE_BINARY_DIR" : "/home/shosh/CLionProjects/Course project/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/shosh/CLionProjects/Course project/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/shosh/CLionProjects/Course project",
-	"CMAKE_EXECUTABLE" : "/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/bin/cmake",
+	"BUILD_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen",
+	"CMAKE_BINARY_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project",
+	"CMAKE_EXECUTABLE" : "/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/shosh/CLionProjects/Course project/CMakeLists.txt",
-		"/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake",
-		"/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake",
-		"/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake",
+		"/home/shosh/CLionProjects/CourseProject/Course project/CMakeLists.txt",
+		"/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake",
+		"/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake",
+		"/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake",
 		"/usr/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
@@ -40,7 +40,7 @@
 		"/usr/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
 		"/usr/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
 		"/usr/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeParseArguments.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseArguments.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake",
@@ -55,23 +55,33 @@
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QPdfPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QTsLibPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandEglPlatformIntegrationPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandIntegrationPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeEglPlatformIntegrationPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QWaylandXCompositeGlxPlatformIntegrationPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake",
+		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake",
 		"/usr/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake",
@@ -81,64 +91,76 @@
 		"/usr/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
 		"/usr/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"/usr/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeParseArguments.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseArguments.cmake",
 		"/usr/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
 		"/usr/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake",
 		"/usr/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
 		"/usr/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
 		"/usr/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/shosh/CLionProjects/Course project",
-	"DEP_FILE" : "/home/shosh/CLionProjects/Course project/cmake-build-debug/Course_project_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project",
+	"DEP_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "Course_project_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/shosh/CLionProjects/Course project/Client/Client.h",
+			"/home/shosh/CLionProjects/CourseProject/Course project/Client/Client.h",
 			"MU",
 			"YWBVKQVKFL/moc_Client.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/GameScreen/CharactersWindows/CharactersWindows.h",
+			"/home/shosh/CLionProjects/CourseProject/Course project/EnterCountcreen/EnterCountScreen.h",
+			"MU",
+			"6FJLBP3TSS/moc_EnterCountScreen.cpp",
+			null
+		],
+		[
+			"/home/shosh/CLionProjects/CourseProject/Course project/GameScreen/CharactersWindows/CharactersWindows.h",
 			"MU",
 			"CQOTVBX6R6/moc_CharactersWindows.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/GameScreen/GameScreen.h",
+			"/home/shosh/CLionProjects/CourseProject/Course project/GameScreen/GameScreen.h",
 			"MU",
 			"ER3QNRLDTK/moc_GameScreen.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/Host/Host.h",
+			"/home/shosh/CLionProjects/CourseProject/Course project/Host/Host.h",
 			"MU",
 			"UNNLUXDBJ7/moc_Host.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/Models/Character.h",
+			"/home/shosh/CLionProjects/CourseProject/Course project/Middleware/Randomisation.h",
+			"MU",
+			"TTFEOXGI4A/moc_Randomisation.cpp",
+			null
+		],
+		[
+			"/home/shosh/CLionProjects/CourseProject/Course project/Models/Character.h",
 			"MU",
 			"25IR5XJDBU/moc_Character.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/StartupScreen/MainWindow.h",
+			"/home/shosh/CLionProjects/CourseProject/Course project/StartupScreen/MainWindow.h",
 			"MU",
 			"M7ZC3QEZ5I/moc_MainWindow.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/WaitScreen/WaitScreen.h",
+			"/home/shosh/CLionProjects/CourseProject/Course project/WaitScreen/WaitScreen.h",
 			"MU",
 			"FWRRUXCAA2/moc_WaitScreen.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/shosh/CLionProjects/Course project/cmake-build-debug/Course_project_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/shosh/CLionProjects/Course project/cmake-build-debug/Course_project_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NETWORK_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -172,53 +194,71 @@
 		"-dM",
 		"-E",
 		"-c",
-		"/home/shosh/IDEs/clion-2023.3.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/shosh/CLionProjects/Course project/cmake-build-debug/Course_project_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 14,
-	"PARSE_CACHE_FILE" : "/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/shosh/CLionProjects/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/shosh/CLionProjects/Course project/Client/Client.cpp",
+			"/home/shosh/CLionProjects/CourseProject/Course project/Client/Client.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/GameScreen/CharactersWindows/CharactersWindows.cpp",
+			"/home/shosh/CLionProjects/CourseProject/Course project/EnterCountcreen/EnterCountScreen.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/GameScreen/GameScreen.cpp",
-			"MU",
-			null
-		],
-		[ "/home/shosh/CLionProjects/Course project/Host/Host.cpp", "MU", null ],
-		[
-			"/home/shosh/CLionProjects/Course project/Models/Character.cpp",
+			"/home/shosh/CLionProjects/CourseProject/Course project/GameScreen/CharactersWindows/CharactersWindows.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/StartupScreen/MainWindow.cpp",
+			"/home/shosh/CLionProjects/CourseProject/Course project/GameScreen/GameScreen.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/Course project/WaitScreen/WaitScreen.cpp",
+			"/home/shosh/CLionProjects/CourseProject/Course project/Host/Host.cpp",
 			"MU",
 			null
 		],
-		[ "/home/shosh/CLionProjects/Course project/main.cpp", "MU", null ]
+		[
+			"/home/shosh/CLionProjects/CourseProject/Course project/Middleware/Randomisation.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/shosh/CLionProjects/CourseProject/Course project/Models/Character.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/shosh/CLionProjects/CourseProject/Course project/StartupScreen/MainWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/shosh/CLionProjects/CourseProject/Course project/WaitScreen/WaitScreen.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/shosh/CLionProjects/CourseProject/Course project/main.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

@@ -11,25 +11,19 @@ CharactersWindows::CharactersWindows(Character &GivenCharacter) {
     this->setLayout(ScreenLayout);
     this->setFrameStyle(1);
     this->show();
+    connectButtonsToSignals();
 }
 
 QWidget *CharactersWindows::CreateCharacterWidget() {
     QWidget *CharacterWidget = new QWidget;
     QVBoxLayout *CharacterWidgetLayout = new QVBoxLayout;
 
-    QLabel *CharacterAge = new QLabel;
     CharacterAge->setText("Age: " + QString::number(PlayerCharacter->getCharacterAge()));
-    QLabel *CharacterSex = new QLabel;
     CharacterSex->setText("Sex: " + PlayerCharacter->getCharacterSex());
-    QLabel *CharacterHealth = new QLabel;
     CharacterHealth->setText("Health: " + PlayerCharacter->getCharacterHealth());
-    QLabel *CharacterFear = new QLabel;
     CharacterFear->setText("Fear: " + PlayerCharacter->getCharacterFear());
-    QLabel *CharacterPersonalTraits = new QLabel;
     CharacterPersonalTraits->setText("Personal traits: " + PlayerCharacter->getCharacterPersonalTraits());
-    QLabel *CharacterAdditionalInfo = new QLabel;
     CharacterAdditionalInfo->setText("Additional info: " + PlayerCharacter->getCharacterAdditionalInfo());
-    QLabel *CharacterPackage = new QLabel;
     CharacterPackage->setText("Package: " + PlayerCharacter->getCharacterPackage());
 
     CharacterWidgetLayout->addWidget(CharacterAge);
@@ -43,4 +37,30 @@ QWidget *CharactersWindows::CreateCharacterWidget() {
     CharacterWidget->setLayout(CharacterWidgetLayout);
 
     return CharacterWidget;
+}
+
+void CharactersWindows::connectButtonsToSignals() {
+
+    connect(CharacterAge, &QPushButton::pressed, [=] {
+        emit traitSent(CharacterAge->text());
+    });
+    connect(CharacterSex, &QPushButton::pressed, [=] {
+        emit traitSent(CharacterSex->text());
+    });
+    connect(CharacterHealth, &QPushButton::pressed, [=] {
+        emit traitSent(CharacterHealth->text());
+    });
+    connect(CharacterFear, &QPushButton::pressed, [=] {
+        emit traitSent(CharacterFear->text());
+    });
+    connect(CharacterPersonalTraits, &QPushButton::pressed, [=] {
+        emit traitSent(CharacterPersonalTraits->text());
+    });
+    connect(CharacterAdditionalInfo, &QPushButton::pressed, [=] {
+        emit traitSent(CharacterAdditionalInfo->text());
+    });
+    connect(CharacterPackage, &QPushButton::pressed, [=] {
+        emit traitSent(CharacterPackage->text());
+    });
+
 }

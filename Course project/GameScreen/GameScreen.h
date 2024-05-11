@@ -9,13 +9,15 @@
 #include "CharactersWindows/CharactersWindows.h"
 
 class GameScreen : public QWidget {
-    QLabel *PlaceHolder = new QLabel("There should be something");
+    Q_OBJECT
     QGridLayout *ScreenLayout = new QGridLayout;
     QVector<CharactersWindows*> CharactersFrames;
 public:
     GameScreen();
 public slots:
     void addCharacterToWindow(Character PlayerCharacter);
+    signals:
+    void traitSent(QString);
 };
 
 

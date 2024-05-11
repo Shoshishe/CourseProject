@@ -9,14 +9,26 @@
 #include "../../Models/Character.h"
 #include "QLabel"
 #include "QWidget"
+#include "QPushButton"
 #include "QVBoxLayout"
 #include "QGridLayout"
 
 class CharactersWindows: public QFrame {
- Character *PlayerCharacter = nullptr;
+    Q_OBJECT
+    Character *PlayerCharacter = nullptr;
+    QPushButton *CharacterAge = new QPushButton;
+    QPushButton *CharacterSex = new QPushButton;
+    QPushButton *CharacterHealth = new QPushButton;
+    QPushButton *CharacterFear = new QPushButton;
+    QPushButton *CharacterPersonalTraits = new QPushButton;
+    QPushButton *CharacterAdditionalInfo = new QPushButton;
+    QPushButton *CharacterPackage = new QPushButton;
 public:
     QWidget *CreateCharacterWidget();
     CharactersWindows(Character &GivenCharacter);
+    void connectButtonsToSignals();
+    signals:
+    void traitSent(QString);
 };
 
 

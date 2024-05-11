@@ -1,7 +1,3 @@
-//
-// Created by shosh on 4/25/24.
-//
-
 #include "Host.h"
 
 void Host::broadcastTheHostIP() {
@@ -16,20 +12,24 @@ void Host::createServer() {;
     QTimer *BroadcastIpTimer = new QTimer(this);
     BroadcastIpTimer->start(5000);
     connect(BroadcastIpTimer, &QTimer::timeout, this, &Host::broadcastTheHostIP);
-    connect(BroadcastSender, &QUdpSocket::readyRead, [=] {
-
-    });
     connect(MainServer, &QTcpServer::newConnection,[=] {
-        qDebug() << "Nice job, you've connected your client to host";
         ClientsIpAddresses.append(MainServer->nextPendingConnection());
         Character NewUserCharacter = generateCharacter();
         QJsonDocument doc(serializeCharacterToJSON(&NewUserCharacter));
         qDebug() << doc;
+
+        //TODO: Put the sending of characters to everyone; Make sure it displays properly and enable turn-based voting
         ClientsIpAddresses.last()->write(doc.toJson());
+        if (ClientsIpAddresses.size() == count_of_players) {
+            MainServer->close();
+            this->disconnect();
+            BroadcastIpTimer->stop();
+        }
     });
 }
 
-void Host::hostGame() {
+void Host::hostGame(int players_count) {
+    count_of_players = players_count;
     createServer();
 }
 
@@ -47,14 +47,14 @@ static QString readRandomStatFromFile(long random_number, QFile* FileToRead) {
 }
 
 Character Host::generateCharacter() {
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
-    long random_int = std::rand();
-    QFile *HealthState = new QFile("../Sources/health_states.txt");
-    QFile *CharacterSex = new QFile("../Sources/character_sex.txt");
-    QFile *Fears = new QFile("../Sources/fears.txt");
-    QFile *AdditionalInfo = new QFile("../Sources/additional_info.txt");
-    QFile *Packages = new QFile("../Sources/packages.txt");
-    QFile *PersonalTraits = new QFile("../Sources/personal_traits.txt");
+    unsigned int random_int = MurmurHash2(salt, salt_length);
+    random_int = xorShift(random_int);
+    auto *HealthState = new QFile("../Sources/health_states.txt");
+    auto *CharacterSex = new QFile("../Sources/character_sex.txt");
+    auto *Fears = new QFile("../Sources/fears.txt");
+    auto *AdditionalInfo = new QFile("../Sources/additional_info.txt");
+    auto *Packages = new QFile("../Sources/packages.txt");
+    auto *PersonalTraits = new QFile("../Sources/personal_traits.txt");
 
     HealthState->open(QIODevice::ReadOnly);
     CharacterSex->open(QIODevice::ReadOnly);
@@ -83,4 +83,10 @@ QJsonObject Host::serializeCharacterToJSON(Character *PlayerCharacter) {
     recorded_object.insert("package", QJsonValue::fromVariant(PlayerCharacter->getCharacterPackage()));
     return recorded_object;
 }
+
+QHostAddress Host::getServerAddress() {
+    return MainServer->serverAddress();
+}
+
+
 

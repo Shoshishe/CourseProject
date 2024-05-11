@@ -1,6 +1,6 @@
-/home/shosh/CLionProjects/Course\ project/cmake-build-debug/Course_project_autogen/YWBVKQVKFL/moc_Client.cpp: /home/shosh/CLionProjects/Course\ project/Client/Client.h \
-  /home/shosh/CLionProjects/Course\ project/cmake-build-debug/Course_project_autogen/moc_predefs.h \
-  /home/shosh/CLionProjects/Course\ project/Models/Character.h \
+/home/shosh/CLionProjects/CourseProject/Course\ project/cmake-build-debug/Course_project_autogen/YWBVKQVKFL/moc_Client.cpp: /home/shosh/CLionProjects/CourseProject/Course\ project/Client/Client.h \
+  /home/shosh/CLionProjects/CourseProject/Course\ project/cmake-build-debug/Course_project_autogen/moc_predefs.h \
+  /home/shosh/CLionProjects/CourseProject/Course\ project/Models/Character.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm/errno.h \
@@ -236,6 +236,7 @@
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QDataStream \
+  /usr/include/qt/QtCore/QDebug \
   /usr/include/qt/QtCore/QObject \
   /usr/include/qt/QtCore/QString \
   /usr/include/qt/QtCore/QTimer \
