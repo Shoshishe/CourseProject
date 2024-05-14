@@ -339,12 +339,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "EnterCountcreen/EnterCountScreen.cpp",
+			"path" : "EnterCountScreen/EnterCountScreen.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "EnterCountcreen/EnterCountScreen.h",
+			"path" : "EnterCountScreen/EnterCountScreen.h",
 			"sourceGroupIndex" : 1
 		},
 		{

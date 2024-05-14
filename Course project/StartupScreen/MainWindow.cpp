@@ -1,12 +1,12 @@
 #include "MainWindow.h"
 
 MainWindow::MainWindow() {
-    QWidget *StartupWindow = new QWidget;
-    QGridLayout *ButtonsLayout = new QGridLayout(StartupWindow);
-    ButtonsLayout->addWidget(CreateGame,0,0);
-    ButtonsLayout->addWidget(EnterGame,1,0);
+    auto *StartupWindow = new QWidget;
+    auto *ButtonsLayout = new QGridLayout(StartupWindow);
+    ButtonsLayout->addWidget(CreateGame, 0, 0);
+    ButtonsLayout->addWidget(EnterGame, 1, 0);
 
-    CentralScreen->insertWidget(MainScreenIndex,StartupWindow);
+    CentralScreen->insertWidget(MainScreenIndex, StartupWindow);
     CentralScreen->insertWidget(GameScreenIndex, GameWindow);
     CentralScreen->insertWidget(WaitScreenIndex, WaitWindow);
     CentralScreen->insertWidget(EnterNameScreenIndex, EnterCountWindow);
@@ -14,7 +14,7 @@ MainWindow::MainWindow() {
     this->setCentralWidget(CentralScreen);
     StartupWindow->setMinimumSize(500, 500);
     CentralScreen->setMinimumSize(500, 500);
-    this->setMinimumSize(500,500);
+    this->setMinimumSize(500, 500);
 
 
     CreateGame->setText("Create a game");
@@ -27,18 +27,30 @@ MainWindow::MainWindow() {
 }
 
 void MainWindow::startGameAsHost() {
-    QSize default_size = this->size();
-    this->setFixedSize(500,400);
+    this->setFixedSize(500, 400);
     changeToEnterCountScreen();
-    connect(EnterCountWindow, &EnterCountScreen::countSet,[=](int count) {
+    connect(EnterCountWindow, &EnterCountScreen::countSet, [=](int count) {
         this->setMinimumSize(500, 500);
         this->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
         changeToGameScreen();
         GameHost = new Host;
         GameHost->hostGame(count);
+
+        connect(GameHost, &Host::giveTurnToHost, GameWindow, &GameScreen::setTurn);
         connect(GameHost, &Client::characterReceived, GameWindow, &GameScreen::addCharacterToWindow);
+        connect(GameHost, &Client::characterReceived, [=] {
+            connect(GameWindow, &GameScreen::traitSent, GameHost, &Client::sendTraitOverUdp);
+            connect(GameHost, &Client::traitReceived, GameWindow, &GameScreen::changeTrait);
+
+            connect(GameHost, &Client::turnReceived, GameWindow, &GameScreen::setTurn);
+            connect(GameHost, &Client::votingStarted, GameWindow, &GameScreen::enableVoteButton);
+            connect(GameWindow, &GameScreen::voteMade, GameHost, &Client::sendVote);
+            connect(GameHost, &Client::voteReceived, GameWindow, &GameScreen::changeVotes);
+
+            //TODO: START GAME ONLY WHEN EVERYONE ARRIVES
+            GameWindow->setTurn();
+        });
         GameHost->connectToHost(GameHost->getServerAddress().toString());
-        connect(GameWindow, &GameScreen::traitSent, GameHost, &Client::sendTraitOverUdp);
     });
 }
 
@@ -51,7 +63,18 @@ void MainWindow::startGameAsUser() {
         this->changeToGameScreen();
     });
     connect(GameClient, &Client::characterReceived, GameWindow, &GameScreen::addCharacterToWindow);
-    connect(GameWindow, &GameScreen::traitSent, GameClient, &Client::sendTraitOverUdp);
+    connect(GameClient, &Client::characterReceived, [=] {
+        connect(GameWindow, &GameScreen::traitSent, GameClient, &Client::sendTraitOverUdp);
+        connect(GameClient, &Client::traitReceived, GameWindow, &GameScreen::changeTrait);
+
+        connect(GameClient, &Client::turnReceived, GameWindow, &GameScreen::setTurn);
+        connect(GameClient, &Client::votingStarted, GameWindow, &GameScreen::enableVoteButton);
+        connect(GameWindow, &GameScreen::voteMade, GameClient, &Client::sendVote);
+        connect(GameClient, &Client::voteReceived, GameWindow, &GameScreen::changeVotes);
+        connect(GameClient, &Client::madeNoTurn, [=](int player) {
+            qDebug() << player;
+        });
+    });
 }
 
 void MainWindow::changeToGameScreen() {

@@ -16,17 +16,21 @@
 #include "QSpinBox"
 
 class EnterCountScreen : public QWidget {
-    Q_OBJECT
-  QString entered_name;
-  QLabel *EnterNameLabel = new QLabel;
-  QSpinBox *CountOfPlayers = new QSpinBox;
-  QPushButton *ConfirmEntering = new QPushButton;
-  QGridLayout *ScreenLayout = new QGridLayout;
+Q_OBJECT
+    QString entered_name;
+    QLabel *EnterNameLabel = new QLabel;
+    QSpinBox *CountOfPlayers = new QSpinBox;
+    QPushButton *ConfirmEntering = new QPushButton;
+    QGridLayout *ScreenLayout = new QGridLayout;
 public:
     EnterCountScreen();
+
 public slots:
+
     void sendCountSet();
-    signals:
+
+signals:
+
     void countSet(int);
 };
 

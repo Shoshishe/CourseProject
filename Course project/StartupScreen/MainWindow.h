@@ -3,7 +3,7 @@
 
 #include "../Client/Client.h"
 #include "../Host/Host.h"
-#include "../EnterCountcreen/EnterCountScreen.h"
+#include "../EnterCountScreen/EnterCountScreen.h"
 #include "../GameScreen/GameScreen.h"
 #include "../WaitScreen/WaitScreen.h"
 #include "QDebug"
@@ -18,9 +18,11 @@
 #include "QWidget"
 
 
-enum ScreenIndexes {MainScreenIndex = 0, GameScreenIndex = 1, WaitScreenIndex = 2, EnterNameScreenIndex = 3};
+enum ScreenIndexes {
+    MainScreenIndex = 0, GameScreenIndex = 1, WaitScreenIndex = 2, EnterNameScreenIndex = 3
+};
 
-class MainWindow: public QMainWindow {
+class MainWindow : public QMainWindow {
 private:
     QStackedWidget *CentralScreen = new QStackedWidget(this);
     QPushButton *CreateGame = new QPushButton(this);
@@ -35,11 +37,17 @@ private:
 
 public:
     MainWindow();
+
     void changeToGameScreen();
+
     void changeToWaitScreen();
+
     void changeToEnterCountScreen();
+
 public slots:
+
     void startGameAsUser();
+
     void startGameAsHost();
 };
 

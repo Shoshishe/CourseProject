@@ -31,8 +31,8 @@ add_executable(Course_project main.cpp
         GameScreen/CharactersWindows/CharactersWindows.h
         Middleware/Randomisation.cpp
         Middleware/Randomisation.h
-        EnterCountcreen/EnterCountScreen.cpp
-        EnterCountcreen/EnterCountScreen.h)
+        EnterCountScreen/EnterCountScreen.cpp
+        EnterCountScreen/EnterCountScreen.h)
 target_link_libraries(Course_project
         Qt5::Core
         Qt5::Gui
