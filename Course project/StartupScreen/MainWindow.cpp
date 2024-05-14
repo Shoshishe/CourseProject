@@ -47,8 +47,9 @@ void MainWindow::startGameAsHost() {
             connect(GameWindow, &GameScreen::voteMade, GameHost, &Client::sendVote);
             connect(GameHost, &Client::voteReceived, GameWindow, &GameScreen::changeVotes);
 
-            //TODO: START GAME ONLY WHEN EVERYONE ARRIVES
-            GameWindow->setTurn();
+            connect(GameHost, &Host::everyoneIsInGame, [=] {
+                GameWindow->setTurn();
+            });
         });
         GameHost->connectToHost(GameHost->getServerAddress().toString());
     });

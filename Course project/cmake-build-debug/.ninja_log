@@ -33,3 +33,12 @@
 3	15	1715679911409290729	/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/mocs_compilation.cpp	f6682afdb4e876e9
 15	1300	1715679912692636176	CMakeFiles/Course_project.dir/GameScreen/GameScreen.cpp.o	99781180446e771a
 1300	1590	1715679912979305550	Course_project	8e985f12d2227638
+3	133	1715680606144311831	Course_project_autogen/timestamp	f6682afdb4e876e9
+3	133	1715680606144311831	Course_project_autogen/mocs_compilation.cpp	f6682afdb4e876e9
+3	133	1715680606144311831	/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/timestamp	f6682afdb4e876e9
+3	133	1715680606144311831	/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/mocs_compilation.cpp	f6682afdb4e876e9
+134	1041	1715680607054324285	CMakeFiles/Course_project.dir/Host/Host.cpp.o	20a2013641020f89
+133	1155	1715680607167659170	CMakeFiles/Course_project.dir/main.cpp.o	be7a750f69f68acd
+133	1270	1715680607280994055	CMakeFiles/Course_project.dir/StartupScreen/MainWindow.cpp.o	c8f8dcd1cb5a133a
+133	1488	1715680607500997066	CMakeFiles/Course_project.dir/Course_project_autogen/mocs_compilation.cpp.o	a74bfd9df432d835
+1488	1803	1715680607814334688	Course_project	8e985f12d2227638

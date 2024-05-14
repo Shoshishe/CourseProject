@@ -8,30 +8,22 @@ void Host::broadcastTheHostIP() {
 void Host::createServer() {
     if (!MainServer->listen(QHostAddress::Any, SERVER_PORT)) {
         qDebug() << QObject::tr("Unable to start the server");
-    }
-    VotesFinder->bind(RANDOM_PORT);
+    } else {
+        BroadcastIpTimer->start(5000);
+        connect(BroadcastIpTimer, &QTimer::timeout, this, &Host::broadcastTheHostIP);
+        TraitsSocket->disconnect();
+        connect(TraitsSocket, &QUdpSocket::readyRead, this, &Host::traitHandle);
+        connect(MainServer, &QTcpServer::newConnection, [=] {
+            ClientsIpAddresses.append(MainServer->nextPendingConnection());
+            Character NewUserCharacter = generateCharacter();
+            QJsonObject CharacterObject = serializeCharacterToJSON(&NewUserCharacter);
+            CharacterObject.insert("number", QJsonValue::fromVariant(ClientsIpAddresses.size()));
+            QJsonDocument CharacterDocument(CharacterObject);
+            ClientsIpAddresses.last()->write(CharacterDocument.toJson());
 
-    auto *BroadcastIpTimer = new QTimer(this);
-    BroadcastIpTimer->start(5000);
-    //Turn into a field of class and move upside.
-    connect(BroadcastIpTimer, &QTimer::timeout, this, &Host::broadcastTheHostIP);
-    TraitsSocket->disconnect();
-    connect(TraitsSocket, &QUdpSocket::readyRead, this, &Host::traitHandle);
-    VotesFinder->open(QIODevice::ReadWrite);
-    connect(VotesFinder, &QTcpSocket::readyRead, this,[=] {
-       qDebug() << "oho";
-    });
-    connect(MainServer, &QTcpServer::newConnection,[=] {
-        ClientsIpAddresses.append(MainServer->nextPendingConnection());
-        Character NewUserCharacter = generateCharacter();
-        QJsonObject CharacterObject = serializeCharacterToJSON(&NewUserCharacter);
-        CharacterObject.insert("number",QJsonValue::fromVariant(ClientsIpAddresses.size()));
-        QJsonDocument CharacterDocument(CharacterObject);
-        ClientsIpAddresses.last()->write(CharacterDocument.toJson());
-
-        auto *AddEmptyCharactersTimer = new QTimer;
-        AddEmptyCharactersTimer->setSingleShot(true);
-        AddEmptyCharactersTimer->start(100);
+            auto *AddEmptyCharactersTimer = new QTimer;
+            AddEmptyCharactersTimer->setSingleShot(true);
+            AddEmptyCharactersTimer->start(100);
             Character EmptyCharacter = generateEmptyCharacter();
             QJsonObject EmptyCharacterObject = serializeCharacterToJSON(&EmptyCharacter);
             QJsonDocument EmptyCharacterDocument;
@@ -45,15 +37,17 @@ void Host::createServer() {
                 ClientsIpAddresses[i]->write(EmptyCharacterDocument.toJson());
             }
 
-        if (ClientsIpAddresses.size() == count_of_players) {
-            connect(AddEmptyCharactersTimer, &QTimer::timeout, [=] {
-            BroadcastIpTimer->stop();
-            for (auto &ClientsIpAddress : ClientsIpAddresses) {
-                ClientsIpAddress->disconnectFromHost();
+            if (ClientsIpAddresses.size() == count_of_players) {
+                connect(AddEmptyCharactersTimer, &QTimer::timeout, [=] {
+                    BroadcastIpTimer->stop();
+                    for (auto &ClientsIpAddress: ClientsIpAddresses) {
+                        ClientsIpAddress->disconnectFromHost();
+                    }
+                });
+                emit everyoneIsInGame();
             }
-            });
-        }
-    });
+        });
+    }
 }
 
 void Host::hostGame(int players_count) {
@@ -61,7 +55,6 @@ void Host::hostGame(int players_count) {
     createServer();
 }
 
-//TODO: FIND OUT THE WAY TO DELETE MOST VOTED CHARACTER
 
 static QString readRandomStatFromFile(long random_number, QFile* FileToRead) {
     auto *contentsStream = new QTextStream(FileToRead);

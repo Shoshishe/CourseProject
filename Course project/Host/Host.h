@@ -27,13 +27,11 @@ class Host : public Client {
     Q_OBJECT
 private:
     QUdpSocket *BroadcastSender = new QUdpSocket(this);
-    QTcpSocket *VotesFinder = new QTcpSocket(this);
     QTcpServer *MainServer = new QTcpServer(this);
     QVector<QTcpSocket *> ClientsIpAddresses;
     QTimer *stopVoting = new QTimer;
+    QTimer *BroadcastIpTimer = new QTimer;
     int count_of_players;
-    int player_with_the_most_votes;
-    int max_votes = 0;
 public:
     QHostAddress getServerAddress();
 
@@ -60,7 +58,10 @@ public slots:
     void startVoting();
 
     signals:
+
     void giveTurnToHost();
+
+    void everyoneIsInGame();
 };
 
 
