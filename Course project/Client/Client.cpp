@@ -46,8 +46,6 @@ void Client::broadcastHandle() {
 
 void Client::connectToHost(const QString& ip_address) {
    ServerConnector->connectToHost(QHostAddress(ip_address),SERVER_PORT);
-   //TODO: Resolve server issues, when you can't start one.
-   //qDebug() << (ServerConnector->state() == QAbstractSocket::ConnectedState);
 }
 
 void Client::sendTraitOverUdp(const QString& trait) {
@@ -62,7 +60,6 @@ void Client::traitHandle() {
     TraitsSocket->readDatagram(data, TraitsSocket->pendingDatagramSize(), &BroadcastSender, sender_ip);
     QString data_in_string(data);
     bool ok;
-    qDebug() << data_in_string;
     if (data_in_string.split(",").size() > 1) {
         int senderNumber = data_in_string.split(",")[1].split(" ")[0].toInt(&ok);
         if (ok) {

@@ -12,11 +12,12 @@ find_package(Qt5 COMPONENTS
         Gui
         Widgets
         Network
+        Multimedia
         REQUIRED)
 
 add_executable(Course_project main.cpp
-        StartupScreen/MainWindow.cpp
-        StartupScreen/MainWindow.h
+        MainWindow/MainWindow.cpp
+        MainWindow/MainWindow.h
         GameScreen/GameScreen.cpp
         GameScreen/GameScreen.h
         WaitScreen/WaitScreen.cpp
@@ -38,5 +39,6 @@ target_link_libraries(Course_project
         Qt5::Gui
         Qt5::Widgets
         Qt5::Network
+        Qt5::Multimedia
 )
 

@@ -1,16 +1,25 @@
 #include "GameScreen.h"
 
 GameScreen::GameScreen() {
-    this->setLayout(ScreenLayout);
+    this->setMaximumSize(800, 800);
 }
 
 void GameScreen::addCharacterToWindow(Character PlayerCharacter, int character_number) {
-  CharactersFrames.append(new CharactersWindows(PlayerCharacter,character_number));
-  ScreenLayout->addWidget(CharactersFrames.last(), ScreenLayout->rowCount() - 1, ScreenLayout->columnCount());
-
-  connect(CharactersFrames[CharactersFrames.size() - 1], &CharactersWindows::voteMade, this, &GameScreen::sendVoteMade);
-  connect(CharactersFrames[0], &CharactersWindows::traitSent, this, &GameScreen::sendTrait);
-  connect(CharactersFrames[0], &CharactersWindows::turnMade, this, &GameScreen::turnMade);
+    CharactersFrames.append(new CharactersWindows(PlayerCharacter, character_number));
+    this->addWidget(CharactersFrames.last());
+    auto *NextScreen = new QPushButton;
+    NextScreen->setText("Next");
+    CharactersFrames.last()->addPlayerChangeButtonToWindow(NextScreen);
+    if (CharactersFrames.size() == 1) {
+       CharactersFrames[0]->getCharacterNumberLabel()->setStyleSheet("color: #a6e3a1;");
+        this->setCurrentIndex(this->count() - 1);
+    }
+    connect(CharactersFrames[CharactersFrames.size() - 1], &CharactersWindows::voteMade, this,
+            &GameScreen::sendVoteMade);
+    connect(CharactersFrames[CharactersFrames.size() - 1], &CharactersWindows::changeToNextPlayer, this,
+            &GameScreen::turnToNextScreen);
+    connect(CharactersFrames[0], &CharactersWindows::traitSent, this, &GameScreen::sendTrait);
+    connect(CharactersFrames[0], &CharactersWindows::turnMade, this, &GameScreen::turnMade);
 }
 
 void GameScreen::changeTrait(const QString& traitAndNumber) {
@@ -99,6 +108,15 @@ void GameScreen::sendVoteMade(int voted_character) {
 void GameScreen::changeVotes(int voted_character) {
     int current_count_of_votes = CharactersFrames[voted_character - 1]->getNumberOfVotesLabel()->text().split(" ")[3].toInt();
     current_count_of_votes++;
+    current_count_of_votes %= (CharactersFrames.size() * 4 - 1);
     CharactersFrames[voted_character - 1]->getNumberOfVotesLabel()->setText("Number of votes: " + QString::number(current_count_of_votes));
+}
+
+void GameScreen::turnToNextScreen() {
+    if (this->currentIndex() != this->count() - 1) {
+        this->setCurrentIndex(this->currentIndex() + 1);
+    } else {
+        this->setCurrentIndex(0);
+    }
 }
 

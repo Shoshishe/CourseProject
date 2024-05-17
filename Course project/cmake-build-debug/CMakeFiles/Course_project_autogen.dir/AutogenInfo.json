@@ -1,22 +1,25 @@
 {
-	"BUILD_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen",
-	"CMAKE_BINARY_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project",
+	"BUILD_DIR" : "/home/shosh/CourseProject/Course project/cmake-build-debug/Course_project_autogen",
+	"CMAKE_BINARY_DIR" : "/home/shosh/CourseProject/Course project/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/shosh/CourseProject/Course project/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/shosh/CourseProject/Course project",
 	"CMAKE_EXECUTABLE" : "/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/shosh/CLionProjects/CourseProject/Course project/CMakeLists.txt",
-		"/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake",
+		"/home/shosh/CourseProject/Course project/CMakeLists.txt",
+		"/home/shosh/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake",
-		"/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake",
-		"/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
+		"/home/shosh/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake",
+		"/home/shosh/CourseProject/Course project/cmake-build-debug/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindCodeBlocks.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake",
+		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/ProcessorCount.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake",
@@ -96,72 +99,88 @@
 		"/usr/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake",
 		"/usr/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
 		"/usr/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
-		"/usr/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake"
+		"/usr/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5Multimedia_CameraBinServicePlugin.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5Multimedia_QAlsaPlugin.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerAudioDecoderServicePlugin.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerCaptureServicePlugin.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5Multimedia_QGstreamerPlayerServicePlugin.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5Multimedia_QM3uPlaylistPlugin.cmake",
+		"/usr/lib/cmake/Qt5Multimedia/Qt5Multimedia_QPulseAudioPlugin.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project",
-	"DEP_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/shosh/CourseProject/Course project",
+	"DEP_FILE" : "/home/shosh/CourseProject/Course project/cmake-build-debug/Course_project_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "Course_project_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/Client/Client.h",
+			"/home/shosh/CourseProject/Course project/Client/Client.h",
 			"MU",
 			"YWBVKQVKFL/moc_Client.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/EnterCountScreen/EnterCountScreen.h",
+			"/home/shosh/CourseProject/Course project/EnterCountScreen/EnterCountScreen.h",
 			"MU",
 			"VZBWRKR5ZQ/moc_EnterCountScreen.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/GameScreen/CharactersWindows/CharactersWindows.h",
+			"/home/shosh/CourseProject/Course project/GameScreen/CharactersWindows/CharactersWindows.h",
 			"MU",
 			"CQOTVBX6R6/moc_CharactersWindows.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/GameScreen/GameScreen.h",
+			"/home/shosh/CourseProject/Course project/GameScreen/GameScreen.h",
 			"MU",
 			"ER3QNRLDTK/moc_GameScreen.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/Host/Host.h",
+			"/home/shosh/CourseProject/Course project/Host/Host.h",
 			"MU",
 			"UNNLUXDBJ7/moc_Host.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/Middleware/Randomisation.h",
+			"/home/shosh/CourseProject/Course project/MainWindow/MainWindow.h",
+			"MU",
+			"WCPGUQ57CZ/moc_MainWindow.cpp",
+			null
+		],
+		[
+			"/home/shosh/CourseProject/Course project/Middleware/Randomisation.h",
 			"MU",
 			"TTFEOXGI4A/moc_Randomisation.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/Models/Character.h",
+			"/home/shosh/CourseProject/Course project/Models/Character.h",
 			"MU",
 			"25IR5XJDBU/moc_Character.cpp",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/StartupScreen/MainWindow.h",
-			"MU",
-			"M7ZC3QEZ5I/moc_MainWindow.cpp",
-			null
-		],
-		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/WaitScreen/WaitScreen.h",
+			"/home/shosh/CourseProject/Course project/WaitScreen/WaitScreen.h",
 			"MU",
 			"FWRRUXCAA2/moc_WaitScreen.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NETWORK_LIB", "QT_WIDGETS_LIB" ],
+	"INCLUDE_DIR" : "/home/shosh/CourseProject/Course project/cmake-build-debug/Course_project_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/shosh/CourseProject/Course project/cmake-build-debug/Course_project_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_MULTIMEDIA_LIB",
+		"QT_NETWORK_LIB",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -177,12 +196,13 @@
 		"/usr/include/qt/QtGui",
 		"/usr/include/qt/QtWidgets",
 		"/usr/include/qt/QtNetwork",
-		"/usr/include/c++/13.2.1",
-		"/usr/include/c++/13.2.1/x86_64-pc-linux-gnu",
-		"/usr/include/c++/13.2.1/backward",
-		"/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include",
+		"/usr/include/qt/QtMultimedia",
+		"/usr/include/c++/14.1.1",
+		"/usr/include/c++/14.1.1/x86_64-pc-linux-gnu",
+		"/usr/include/c++/14.1.1/backward",
+		"/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include",
 		"/usr/local/include",
-		"/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed",
+		"/usr/lib/gcc/x86_64-pc-linux-gnu/14.1.1/include-fixed",
 		"/usr/include"
 	],
 	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
@@ -196,69 +216,61 @@
 		"-c",
 		"/home/shosh/clion-2024.1.1/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/Course_project_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/shosh/CourseProject/Course project/cmake-build-debug/Course_project_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 14,
-	"PARSE_CACHE_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/shosh/CourseProject/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/shosh/CLionProjects/CourseProject/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/shosh/CourseProject/Course project/cmake-build-debug/CMakeFiles/Course_project_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/Client/Client.cpp",
+			"/home/shosh/CourseProject/Course project/Client/Client.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/EnterCountScreen/EnterCountScreen.cpp",
+			"/home/shosh/CourseProject/Course project/EnterCountScreen/EnterCountScreen.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/GameScreen/CharactersWindows/CharactersWindows.cpp",
+			"/home/shosh/CourseProject/Course project/GameScreen/CharactersWindows/CharactersWindows.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/GameScreen/GameScreen.cpp",
+			"/home/shosh/CourseProject/Course project/GameScreen/GameScreen.cpp",
+			"MU",
+			null
+		],
+		[ "/home/shosh/CourseProject/Course project/Host/Host.cpp", "MU", null ],
+		[
+			"/home/shosh/CourseProject/Course project/MainWindow/MainWindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/Host/Host.cpp",
+			"/home/shosh/CourseProject/Course project/Middleware/Randomisation.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/Middleware/Randomisation.cpp",
+			"/home/shosh/CourseProject/Course project/Models/Character.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/Models/Character.cpp",
+			"/home/shosh/CourseProject/Course project/WaitScreen/WaitScreen.cpp",
 			"MU",
 			null
 		],
-		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/StartupScreen/MainWindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/WaitScreen/WaitScreen.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/shosh/CLionProjects/CourseProject/Course project/main.cpp",
-			"MU",
-			null
-		]
+		[ "/home/shosh/CourseProject/Course project/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

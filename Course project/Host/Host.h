@@ -5,35 +5,38 @@
 #ifndef COURSE_PROJECT_HOST_H
 #define COURSE_PROJECT_HOST_H
 
-#include "../Client/Client.h"
-#include "QElapsedTimer"
-#include <QTcpSocket>
-#include <QUdpSocket>
-#include <QTcpServer>
-#include <QTimer>
-#include "QObject"
-#include "QFile"
-#include "QHostAddress"
-#include "QDataStream"
-#include "QMap"
 #include "cstdlib"
 #include "ctime"
-#include "../Models/Character.h"
+#include <QDataStream>
+#include <QErrorMessage>
+#include <QFile>
+#include <QHostAddress>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QMap>
+#include <QObject>
+#include <QTcpServer>
+#include <QTcpSocket>
+#include <QTimer>
+#include <QUdpSocket>
+#include "../Client/Client.h"
 #include "../Middleware/Randomisation.h"
-#include "QJsonObject"
-#include "QJsonDocument"
+#include "../Models/Character.h"
 
 class Host : public Client {
     Q_OBJECT
 private:
     QUdpSocket *BroadcastSender = new QUdpSocket(this);
     QTcpServer *MainServer = new QTcpServer(this);
-    QVector<QTcpSocket *> ClientsIpAddresses;
+    QVector<QTcpSocket *> ClientsSockets;
     QTimer *stopVoting = new QTimer;
     QTimer *BroadcastIpTimer = new QTimer;
+    QErrorMessage *errorMessage = new QErrorMessage;
     int count_of_players;
 public:
     QHostAddress getServerAddress();
+
+    QTcpServer* getMainServer();
 
     void createServer();
 
@@ -62,6 +65,8 @@ public slots:
     void giveTurnToHost();
 
     void everyoneIsInGame();
+
+    void startFailure();
 };
 
 

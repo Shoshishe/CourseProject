@@ -18,7 +18,7 @@ public:
     void setUserAsWaiting(Client *User);
     WaitScreen();
 public slots:
-    void AddNewHostEntry(const QString& ip_address);
+    void addNewHostEntry(const QString& host_address);
 };
 
 

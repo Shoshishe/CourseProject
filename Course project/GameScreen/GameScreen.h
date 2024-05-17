@@ -1,15 +1,16 @@
 #ifndef COURSE_PROJECT_GAMESCREEN_H
 #define COURSE_PROJECT_GAMESCREEN_H
 
-#include "QLabel"
-#include "QGridLayout"
-#include "QWidget"
 #include "QDebug"
+#include "QGridLayout"
+#include "QLabel"
+#include "QStackedWidget"
 #include "QTimer"
 #include "QVector"
+#include "QWidget"
 #include "CharactersWindows/CharactersWindows.h"
 
-class GameScreen : public QWidget {
+class GameScreen : public QStackedWidget {
 Q_OBJECT
     int count_of_unopened_traits = 7;
     QGridLayout *ScreenLayout = new QGridLayout;
@@ -34,6 +35,8 @@ public slots:
     void enableVoteButton();
 
     void changeVotes(int voted_character);
+
+    void turnToNextScreen();
 
 signals:
 

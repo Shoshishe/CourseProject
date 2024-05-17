@@ -1,7 +1,3 @@
-//
-// Created by shosh on 5/11/24.
-//
-
 #ifndef COURSE_PROJECT_ENTERCOUNTSCREEN_H
 #define COURSE_PROJECT_ENTERCOUNTSCREEN_H
 

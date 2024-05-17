@@ -7,19 +7,23 @@ void Host::broadcastTheHostIP() {
 
 void Host::createServer() {
     if (!MainServer->listen(QHostAddress::Any, SERVER_PORT)) {
+        BroadcastIpTimer->stop();
         qDebug() << QObject::tr("Unable to start the server");
+        errorMessage = new QErrorMessage();
+        errorMessage->showMessage("Unable to start the server");
+        emit startFailure();
     } else {
         BroadcastIpTimer->start(5000);
         connect(BroadcastIpTimer, &QTimer::timeout, this, &Host::broadcastTheHostIP);
         TraitsSocket->disconnect();
         connect(TraitsSocket, &QUdpSocket::readyRead, this, &Host::traitHandle);
         connect(MainServer, &QTcpServer::newConnection, [=] {
-            ClientsIpAddresses.append(MainServer->nextPendingConnection());
+            ClientsSockets.append(MainServer->nextPendingConnection());
             Character NewUserCharacter = generateCharacter();
             QJsonObject CharacterObject = serializeCharacterToJSON(&NewUserCharacter);
-            CharacterObject.insert("number", QJsonValue::fromVariant(ClientsIpAddresses.size()));
+            CharacterObject.insert("number", QJsonValue::fromVariant(ClientsSockets.size()));
             QJsonDocument CharacterDocument(CharacterObject);
-            ClientsIpAddresses.last()->write(CharacterDocument.toJson());
+            ClientsSockets.last()->write(CharacterDocument.toJson());
 
             auto *AddEmptyCharactersTimer = new QTimer;
             AddEmptyCharactersTimer->setSingleShot(true);
@@ -27,21 +31,21 @@ void Host::createServer() {
             Character EmptyCharacter = generateEmptyCharacter();
             QJsonObject EmptyCharacterObject = serializeCharacterToJSON(&EmptyCharacter);
             QJsonDocument EmptyCharacterDocument;
-            for (int i = 0; i < ClientsIpAddresses.size() - 1; i++) {
+            for (int i = 0; i < ClientsSockets.size() - 1; i++) {
                 EmptyCharacterObject.insert("number", QJsonValue::fromVariant(i + 1));
                 EmptyCharacterDocument = QJsonDocument(EmptyCharacterObject);
-                ClientsIpAddresses.last()->write(EmptyCharacterDocument.toJson());
+                ClientsSockets.last()->write(EmptyCharacterDocument.toJson());
 
-                EmptyCharacterObject.insert("number", QJsonValue::fromVariant(ClientsIpAddresses.size()));
+                EmptyCharacterObject.insert("number", QJsonValue::fromVariant(ClientsSockets.size()));
                 EmptyCharacterDocument = QJsonDocument(EmptyCharacterObject);
-                ClientsIpAddresses[i]->write(EmptyCharacterDocument.toJson());
+                ClientsSockets[i]->write(EmptyCharacterDocument.toJson());
             }
 
-            if (ClientsIpAddresses.size() == count_of_players) {
+            if (ClientsSockets.size() == count_of_players) {
                 connect(AddEmptyCharactersTimer, &QTimer::timeout, [=] {
                     BroadcastIpTimer->stop();
-                    for (auto &ClientsIpAddress: ClientsIpAddresses) {
-                        ClientsIpAddress->disconnectFromHost();
+                    for (auto &ClientTcpSocket: ClientsSockets) {
+                        ClientTcpSocket->disconnectFromHost();
                     }
                 });
                 emit everyoneIsInGame();
@@ -59,7 +63,13 @@ void Host::hostGame(int players_count) {
 static QString readRandomStatFromFile(long random_number, QFile* FileToRead) {
     auto *contentsStream = new QTextStream(FileToRead);
     QString data;
-    for (int i = 0; i < random_number % 100; i++) {
+    int count_of_lines = 0;
+    while (!contentsStream->atEnd()) {
+        contentsStream->readLine();
+        count_of_lines++;
+    }
+    contentsStream->seek(0);
+    for (int i = 0; i <= random_number % count_of_lines; i++) {
         if (!contentsStream->atEnd()) {
             data = contentsStream->readLine();
         } else {
@@ -72,26 +82,26 @@ static QString readRandomStatFromFile(long random_number, QFile* FileToRead) {
 Character Host::generateCharacter() {
     unsigned int random_int = MurmurHash2(salt, salt_length);
     random_int = xorShift(random_int);
-    auto *HealthState = new QFile("../Sources/health_states.txt");
-    auto *CharacterSex = new QFile("../Sources/character_sex.txt");
-    auto *Fears = new QFile("../Sources/fears.txt");
-    auto *AdditionalInfo = new QFile("../Sources/additional_info.txt");
-    auto *Packages = new QFile("../Sources/packages.txt");
-    auto *PersonalTraits = new QFile("../Sources/personal_traits.txt");
+    auto *HealthStateFile = new QFile("../Sources/health_states.txt");
+    auto *CharacterSexFile = new QFile("../Sources/character_sex.txt");
+    auto *FearsFile = new QFile("../Sources/fears.txt");
+    auto *AdditionalInfoFile = new QFile("../Sources/additional_info.txt");
+    auto *PackagesFile = new QFile("../Sources/packages.txt");
+    auto *PersonalTraitsFile = new QFile("../Sources/personal_traits.txt");
 
-    HealthState->open(QIODevice::ReadOnly);
-    CharacterSex->open(QIODevice::ReadOnly);
-    Fears->open(QIODevice::ReadOnly);
-    AdditionalInfo->open(QIODevice::ReadOnly);
-    Packages->open(QIODevice::ReadOnly);
-    PersonalTraits->open(QIODevice::ReadOnly);
+    HealthStateFile->open(QIODevice::ReadOnly);
+    CharacterSexFile->open(QIODevice::ReadOnly);
+    FearsFile->open(QIODevice::ReadOnly);
+    AdditionalInfoFile->open(QIODevice::ReadOnly);
+    PackagesFile->open(QIODevice::ReadOnly);
+    PersonalTraitsFile->open(QIODevice::ReadOnly);
 
-    QString health = readRandomStatFromFile(random_int, HealthState);
-    QString sex = readRandomStatFromFile(random_int, CharacterSex);
-    QString fears = readRandomStatFromFile(random_int, Fears);
-    QString additional_info = readRandomStatFromFile(random_int, AdditionalInfo);
-    QString packages = readRandomStatFromFile(random_int, Packages);
-    QString personal_traits = readRandomStatFromFile(random_int, PersonalTraits);
+    QString health = readRandomStatFromFile(random_int, HealthStateFile);
+    QString sex = readRandomStatFromFile(random_int, CharacterSexFile);
+    QString fears = readRandomStatFromFile(random_int, FearsFile);
+    QString additional_info = readRandomStatFromFile(random_int, AdditionalInfoFile);
+    QString packages = readRandomStatFromFile(random_int, PackagesFile);
+    QString personal_traits = readRandomStatFromFile(random_int, PersonalTraitsFile);
     return Character(random_int % 72 + 18, sex, health, fears, personal_traits, additional_info, packages);
 }
 
@@ -133,6 +143,10 @@ void Host::startVoting() {
 
 void Host::sendVotingEnd() {
     emit giveTurnToHost();
+}
+
+QTcpServer *Host::getMainServer() {
+    return MainServer;
 }
 
 

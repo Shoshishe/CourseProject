@@ -13,6 +13,7 @@
 #include "QStackedWidget"
 #include <QTcpServer>
 #include <QTcpSocket>
+#include <QTextEdit>
 #include <QTimer>
 #include <QUdpSocket>
 #include "QWidget"
@@ -27,8 +28,9 @@ private:
     QStackedWidget *CentralScreen = new QStackedWidget(this);
     QPushButton *CreateGame = new QPushButton(this);
     QPushButton *EnterGame = new QPushButton(this);
+    QPushButton *Help = new QPushButton(this);
 
-    GameScreen *GameWindow = new GameScreen;
+    GameScreen* GameWindows = new GameScreen;
     WaitScreen *WaitWindow = new WaitScreen;
     EnterCountScreen *EnterCountWindow = new EnterCountScreen();
 
@@ -44,11 +46,15 @@ public:
 
     void changeToEnterCountScreen();
 
+    void changeToMainScreen();
+
 public slots:
 
     void startGameAsUser();
 
     void startGameAsHost();
+
+    static void showHelp();
 };
 
 

@@ -1,13 +1,14 @@
 #include "WaitScreen.h"
 
-void WaitScreen::AddNewHostEntry(const QString& ip_address) {
-    QFrame *ConnectionFrame = new QFrame;
+void WaitScreen::addNewHostEntry(const QString& host_address) {
+    auto *ConnectionFrame = new QFrame;
     ConnectionFrame->setFrameStyle(1);
-    QWidget *ConnectionWindow = new QWidget(ConnectionFrame);
-    QGridLayout *ConnectionWindowLayout = new QGridLayout(ConnectionWindow);
-    QLabel *IpAddressLabel = new QLabel(this);
-    IpAddressLabel->setText(ip_address);
-    QPushButton *ConnectToTheGame = new QPushButton(this);
+    auto *ConnectionWindow = new QWidget(ConnectionFrame);
+    auto *ConnectionWindowLayout = new QGridLayout(ConnectionWindow);
+    auto *IpAddressLabel = new QLabel(this);
+    auto ip_address = host_address.split(" ")[0];
+    IpAddressLabel->setText(host_address);
+    auto *ConnectToTheGame = new QPushButton(this);
     ConnectToTheGame->setText("Enter the game of this host");
     ConnectionWindowLayout->addWidget(IpAddressLabel, 0, 0);
     ConnectionWindowLayout->addWidget(ConnectToTheGame, 1, 0);

@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_GameScreen_t {
-    QByteArrayData data[17];
-    char stringdata0[198];
+    QByteArrayData data[18];
+    char stringdata0[215];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,7 +48,8 @@ QT_MOC_LITERAL(12, 132, 12), // "sendVoteMade"
 QT_MOC_LITERAL(13, 145, 15), // "voted_character"
 QT_MOC_LITERAL(14, 161, 7), // "setTurn"
 QT_MOC_LITERAL(15, 169, 16), // "enableVoteButton"
-QT_MOC_LITERAL(16, 186, 11) // "changeVotes"
+QT_MOC_LITERAL(16, 186, 11), // "changeVotes"
+QT_MOC_LITERAL(17, 198, 16) // "turnToNextScreen"
 
     },
     "GameScreen\0traitSent\0\0turnMade\0voteMade\0"
@@ -56,7 +57,7 @@ QT_MOC_LITERAL(16, 186, 11) // "changeVotes"
     "PlayerCharacter\0character_number\0"
     "changeTrait\0sendTrait\0trait\0sendVoteMade\0"
     "voted_character\0setTurn\0enableVoteButton\0"
-    "changeVotes"
+    "changeVotes\0turnToNextScreen"
 };
 #undef QT_MOC_LITERAL
 
@@ -66,7 +67,7 @@ static const uint qt_meta_data_GameScreen[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -74,18 +75,19 @@ static const uint qt_meta_data_GameScreen[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   64,    2, 0x06 /* Public */,
-       3,    0,   67,    2, 0x06 /* Public */,
-       4,    1,   68,    2, 0x06 /* Public */,
+       1,    1,   69,    2, 0x06 /* Public */,
+       3,    0,   72,    2, 0x06 /* Public */,
+       4,    1,   73,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    2,   71,    2, 0x0a /* Public */,
-       9,    1,   76,    2, 0x0a /* Public */,
-      10,    1,   79,    2, 0x0a /* Public */,
-      12,    1,   82,    2, 0x0a /* Public */,
-      14,    0,   85,    2, 0x0a /* Public */,
-      15,    0,   86,    2, 0x0a /* Public */,
-      16,    1,   87,    2, 0x0a /* Public */,
+       5,    2,   76,    2, 0x0a /* Public */,
+       9,    1,   81,    2, 0x0a /* Public */,
+      10,    1,   84,    2, 0x0a /* Public */,
+      12,    1,   87,    2, 0x0a /* Public */,
+      14,    0,   90,    2, 0x0a /* Public */,
+      15,    0,   91,    2, 0x0a /* Public */,
+      16,    1,   92,    2, 0x0a /* Public */,
+      17,    0,   95,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    2,
@@ -100,6 +102,7 @@ static const uint qt_meta_data_GameScreen[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   13,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -120,6 +123,7 @@ void GameScreen::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 7: _t->setTurn(); break;
         case 8: _t->enableVoteButton(); break;
         case 9: _t->changeVotes((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 10: _t->turnToNextScreen(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -149,7 +153,7 @@ void GameScreen::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
 }
 
 QT_INIT_METAOBJECT const QMetaObject GameScreen::staticMetaObject = { {
-    QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
+    QMetaObject::SuperData::link<QStackedWidget::staticMetaObject>(),
     qt_meta_stringdata_GameScreen.data,
     qt_meta_data_GameScreen,
     qt_static_metacall,
@@ -168,22 +172,22 @@ void *GameScreen::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_GameScreen.stringdata0))
         return static_cast<void*>(this);
-    return QWidget::qt_metacast(_clname);
+    return QStackedWidget::qt_metacast(_clname);
 }
 
 int GameScreen::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QWidget::qt_metacall(_c, _id, _a);
+    _id = QStackedWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 11)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 11;
     }
     return _id;
 }

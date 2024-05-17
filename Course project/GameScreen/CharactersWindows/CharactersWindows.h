@@ -7,6 +7,7 @@
 
 #include "QDebug"
 #include "QFrame"
+#include "QIcon"
 #include "../../Models/Character.h"
 #include "QLabel"
 #include "QWidget"
@@ -37,6 +38,8 @@ public:
 
     CharactersWindows(Character &GivenCharacter, int number);
 
+    void addPlayerChangeButtonToWindow(QPushButton *NextPlayerButton);
+
     void connectButtonsToSignals();
 
     int getCharacterNumber() const;
@@ -57,11 +60,17 @@ public:
 
     QPushButton* getVoteForCharacter();
 
+    QLabel* getCharacterNumberLabel();
+
     QLabel* getNumberOfVotesLabel();
 
     void setTurn(bool is_true);
 
     void replaceButtonWithLabel(QPushButton *button);
+
+    void disableTraitsButtons();
+
+    void enableTraitsButtons();
 
 signals:
 
@@ -70,6 +79,9 @@ signals:
     void turnMade();
 
     void voteMade(int);
+
+    void changeToNextPlayer();
+
 };
 
 
