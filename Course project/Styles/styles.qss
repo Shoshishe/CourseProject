@@ -1,0 +1,8 @@
+QPushButton { color: #cdd6f4; border-style:outset ; border-color: white; border-width: 1px; padding: 4px; border-radius: 10px; background: #313244;}
+QLabel {color: #cdd6f4;}
+QSpinBox {color: white; border-color:white;}
+QPushButton:hover {border-width: 2px; border-style: outset;}
+QPushButton:disabled {background-color: none; border-radius: 0px; border-style:inset;}
+QTextEdit {color: #cdd6f4; background-color:#313244;}
+/*QLabel {color: #cdd6f4; background: #e64553; border-style:outset; border-radius: 10px; border-width: 1px;}*/
+QScrollBar:vertical {background-color: #cdd6f4;}
